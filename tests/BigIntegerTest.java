@@ -4,11 +4,20 @@ import org.junit.Test;
 public class BigIntegerTest {
     /**
      * Basic test for the toString method, ensures that the bigInt can be read out as it was entered
-     * @result Should always be the same as what we entered
+     * @result Should always be the same as what was entered
      */
     @Test
     public void basicToStringTest(){
-        toStringTest("123456");
+        toStringTest("123,456");
+    }
+
+    /**
+     * Basic test for the toString method, ensures that the bigInt can be read out as it was entered
+     * @result Should always be the same as what was entered
+     */
+    @Test
+    public void basicNegativeToStringTest(){
+        toStringTest("-123,456");
     }
 
     /**
@@ -17,7 +26,7 @@ public class BigIntegerTest {
      */
     @Test
     public void bigToStringTest(){
-        toStringTest("46376937677490009712648124896970078050417018260538");
+        toStringTest("46,376,937,677,490,009,712,648,124,896,970,078,050,417,018,260,538");
     }
 
     /**
@@ -26,7 +35,7 @@ public class BigIntegerTest {
      */
     @Test
     public void negativeToStringTest(){
-        toStringTest("-46376937677490009712648124896970078050417018260538");
+        toStringTest("-46,376,937,677,490,009,712,648,124,896,970,078,050,417,018,260,538");
     }
 
     /**
